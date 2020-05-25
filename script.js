@@ -1,6 +1,5 @@
 // Fonctionnalité 1  et 1-bis : footer onClick --> console.log 
 var footer = document.getElementsByTagName("footer")[0];
-console.log()
 counter = 0;
 
 function footerConsoleLog() {
@@ -23,7 +22,7 @@ function uncollapse() {
     }
 }
 
-navbar.addEventListener("click", uncollapse)
+navbar.querySelector("button.navbar-toggler").addEventListener("click", uncollapse)
 
 
 //Fonctionnalité 3 : la première carte voit rouge
@@ -31,8 +30,8 @@ var editFirstCard = document.getElementsByClassName("card-body")[0];
 var firstButton = editFirstCard.lastElementChild.firstElementChild.lastElementChild;
 
 function onClickRed() {
-    let cardText = editFirstCard.firstElementChild;
-    cardText.style.color = "red";
+    let firstText = editFirstCard.firstElementChild;
+    firstText.style.color = "red";
 }
 
 firstButton.addEventListener("click", onClickRed);
@@ -54,7 +53,38 @@ function onClickGreen() {
 secondButton.addEventListener("click", onClickGreen);
 
 
-//Fonctionnalité 5 : ☢ "nucléaire" 🤯
+//Fonctionnalité 5 : "nucléaire" 🤯
+function delBootstrap() {
+    let mainDiv = document.querySelector("head > link");
+    let bootstrap = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    if (mainDiv.href === bootstrap){
+        mainDiv.href = "";
+    } else {
+        mainDiv.href = bootstrap;
+    }
+}
+
+navbar.addEventListener("dblclick", delBootstrap);
 
 
+//Fonctionnalité 6 : 
+var viewButton = document.querySelectorAll('.btn-success');
 
+viewButton.forEach(button => {
+    function reduceCard() {
+        var text = this.parentElement.parentElement.previousElementSibling;
+        var image = text.parentElement.previousElementSibling;
+        console.log(image)
+        if (text.style.display != 'none') {
+            text.style.display = 'none';
+            image.style.height = "20%";
+            image.style.width = "20%";
+        } else {
+            text.style.display = '';
+            image.style.width = '';
+        }
+    }
+    button.addEventListener("mouseover", reduceCard);
+});
+
+//Fonctionnalité 7 : 
