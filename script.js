@@ -72,9 +72,8 @@ var viewButton = document.querySelectorAll('.btn-success');
 
 viewButton.forEach(button => {
     function reduceCard() {
-        var text = this.parentElement.parentElement.previousElementSibling;
-        var image = text.parentElement.previousElementSibling;
-        console.log(image)
+        let text = this.parentElement.parentElement.previousElementSibling;
+        let image = text.parentElement.previousElementSibling;
         if (text.style.display != 'none') {
             text.style.display = 'none';
             image.style.height = "20%";
@@ -82,9 +81,41 @@ viewButton.forEach(button => {
         } else {
             text.style.display = '';
             image.style.width = '';
+            image.style.height = '';
         }
     }
     button.addEventListener("mouseover", reduceCard);
 });
 
 //Fonctionnalité 7 : 
+var rightSide = document.querySelector(".btn-secondary");
+
+function roundAbout() {
+    let allCards = document.querySelectorAll(".row")[1];
+    last = allCards.insertBefore(allCards.lastElementChild, allCards.firstElementChild);
+}
+
+rightSide.addEventListener("click", roundAbout);
+
+//Fonctionnalité 8 : 
+var leftSide = document.querySelector(".btn-primary");
+
+function antiRoundAbout(e) {
+    e.preventDefault();
+    let allCards = document.querySelectorAll(".row")[1];
+    first = allCards.insertBefore(allCards.firstElementChild, allCards.lastElementChild.nextElementSibling);
+}
+
+leftSide.addEventListener("click", antiRoundAbout);
+
+
+//Fonctionnalité 9 : 
+
+
+/* 
+    La fonctionnalité se déclenchera si le logo de la page (JS & Events) est sélectionné et qu'on appuie sur une touche spécifique du clavier.
+    Si l'utilisateur presse la touche "a", l'ensemble de la page va être condensé sur 4 colonnes Bootstrap à gauche de l'écran.
+    Si l'utilisateur presse la touche "y", l'ensemble de la page va être condensé sur 4 colonnes Bootstrap au milieu de l'écran.
+    Si l'utilisateur presse la touche "p", l'ensemble de la page va être condensé sur 4 colonnes Bootstrap à droite de l'écran.
+    Si l'utilisateur presse la touche "b", tout redevient normal.
+*/
