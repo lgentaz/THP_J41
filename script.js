@@ -67,7 +67,7 @@ function delBootstrap() {
 navbar.addEventListener("dblclick", delBootstrap);
 
 
-//Fonctionnalité 6 : 
+//Fonctionnalité 6 : Fais-toi tout petit
 var viewButton = document.querySelectorAll('.btn-success');
 
 viewButton.forEach(button => {
@@ -87,7 +87,7 @@ viewButton.forEach(button => {
     button.addEventListener("mouseover", reduceCard);
 });
 
-//Fonctionnalité 7 : 
+//Fonctionnalité 7 : Tournez-manège
 var rightSide = document.querySelector(".btn-secondary");
 
 function roundAbout() {
@@ -97,7 +97,7 @@ function roundAbout() {
 
 rightSide.addEventListener("click", roundAbout);
 
-//Fonctionnalité 8 : 
+//Fonctionnalité 8 : Le manège enchanté (tant qu'on est dans les vieilles emissions)
 var leftSide = document.querySelector(".btn-primary");
 
 function antiRoundAbout(e) {
@@ -109,13 +109,28 @@ function antiRoundAbout(e) {
 leftSide.addEventListener("click", antiRoundAbout);
 
 
-//Fonctionnalité 9 : 
+//Fonctionnalité 9 : logo (image et titre) down
+var jSEvents = document.querySelector(".navbar-brand");
+function rearrange(e) {
+    if (e.code === "KeyQ"){
+        console.log("touche A")
+    } else if (e.code === "KeyY"){
+        console.log("touche Y")
+    } else if (e.code === "KeyP"){
+        console.log("touche P")
+    } else if (e.code === "KeyB"){
+        console.log("touche B")
+    }
+}
 
+jSEvents.addEventListener("keypress", rearrange);
 
 /* 
-    La fonctionnalité se déclenchera si le logo de la page (JS & Events) est sélectionné et qu'on appuie sur une touche spécifique du clavier.
+    La fonctionnalité se déclenchera si le logo de la page (JS & Events) est sélectionné 
+    et qu'on appuie sur une touche spécifique du clavier.
     Si l'utilisateur presse la touche "a", l'ensemble de la page va être condensé sur 4 colonnes Bootstrap à gauche de l'écran.
     Si l'utilisateur presse la touche "y", l'ensemble de la page va être condensé sur 4 colonnes Bootstrap au milieu de l'écran.
     Si l'utilisateur presse la touche "p", l'ensemble de la page va être condensé sur 4 colonnes Bootstrap à droite de l'écran.
     Si l'utilisateur presse la touche "b", tout redevient normal.
 */
+
