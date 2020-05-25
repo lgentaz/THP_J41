@@ -14,20 +14,20 @@ Lance l'index dans ton navigateur et c'est parti!
 
 ## Fonctionnalités
 ### F1 - Footer
-> Pour cette fonctionnalité uniquement: afficher la console dans le navigateur
 En cliquant sur le footer, "clique" s'affiche dans la console ainsi que le compte des clics.
+> Pour cette fonctionnalité uniquement: afficher la console dans le navigateur
 
 ### F2 - Toggle burger et frites
 But : reproduire le toggle associé habituellement au script JS de bootstrap.
 Cliquer sur le hamburger-menu pour afficher la totalité du header.
 
-### F3 - la première carte voit rouge
+### F3 - La première carte voit rouge
 Cliquer sur le bouton Edit de la première carte pour afficher son texte en rouge (irreversible)
 
-### F4 - la deuxième carte se met au vert
+### F4 - La deuxième carte se met au vert
 Cliquer sur le bouton Edit de la deuxième carte pour afficher son texte en vert. Cette modification est réversible en recliquant sur le bouton Edit.
 
-### F5 - "nucléaire" 🤯
+### F5 - Nucleaire 🤯
 On fait péter le Bootstrap. Double-cliquer n'importe ou dans la navbar permet de suppimer le bootstrap dans la page. La modification est réversible en cliquant à nouveau.
 
 ### F6 - Fais-toi tout petit
@@ -39,7 +39,7 @@ Cliquer sur le bouton de droite dans le jumbotron permet de décaler toutes les 
 ### F8 - Le manège enchanté (tant qu'on est dans les vieilles emissions avec "manège")
 Cliquer sur le bouton de gauche dans le jumbotron permet de décaler toutes les cartes d'une place à gauche dans la liste
 
-### F9 - logo (image et titre) effet yoyo
+### F9 - Logo yoyo (image et titre)
 Selectionner le logo "JS & Events" en cliquant dessus.
 Maintenant il est possible de modifier la taille de l'affichage de la page en cliquant juste sur certaines touches du clavier.
 * Touche "a" : page condensé sur 4 colonnes à gauche de la fenêtre.
