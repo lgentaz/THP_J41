@@ -111,26 +111,21 @@ leftSide.addEventListener("click", antiRoundAbout);
 
 //Fonctionnalité 9 : logo (image et titre) down
 var jSEvents = document.querySelector(".navbar-brand");
+var page = document.getElementsByTagName("body")[0];
+
 function rearrange(e) {
     if (e.code === "KeyQ"){
-        console.log("touche A")
+        page.className = "col-sm-4";
+
     } else if (e.code === "KeyY"){
-        console.log("touche Y")
+        page.className = "col-sm-4 offset-4";
     } else if (e.code === "KeyP"){
-        console.log("touche P")
+        page.className = "col-sm-4 offset-8";
     } else if (e.code === "KeyB"){
-        console.log("touche B")
+        page.className = "";
     }
 }
 
 jSEvents.addEventListener("keypress", rearrange);
 
-/* 
-    La fonctionnalité se déclenchera si le logo de la page (JS & Events) est sélectionné 
-    et qu'on appuie sur une touche spécifique du clavier.
-    Si l'utilisateur presse la touche "a", l'ensemble de la page va être condensé sur 4 colonnes Bootstrap à gauche de l'écran.
-    Si l'utilisateur presse la touche "y", l'ensemble de la page va être condensé sur 4 colonnes Bootstrap au milieu de l'écran.
-    Si l'utilisateur presse la touche "p", l'ensemble de la page va être condensé sur 4 colonnes Bootstrap à droite de l'écran.
-    Si l'utilisateur presse la touche "b", tout redevient normal.
-*/
 
