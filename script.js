@@ -114,14 +114,13 @@ var jSEvents = document.querySelector(".navbar-brand");
 var page = document.getElementsByTagName("body")[0];
 
 function rearrange(e) {
-    if (e.code === "KeyQ"){
+    if (e.key === "a"){
         page.className = "col-sm-4";
-
-    } else if (e.code === "KeyY"){
+    } else if (e.key === "y"){
         page.className = "col-sm-4 offset-4";
-    } else if (e.code === "KeyP"){
+    } else if (e.key === "p"){
         page.className = "col-sm-4 offset-8";
-    } else if (e.code === "KeyB"){
+    } else if (e.key === "b"){
         page.className = "";
     }
 }
